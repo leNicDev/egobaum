@@ -25,6 +25,6 @@ app.get("/init/:param", function(req, res) {
 
 // first static response
 app.get("/mock", function(req, res) {
-    var mockJSON = {'test': 'person'};
+    var mockJSON = JSON.parse(fs.readFileSync('./mock/firstJSONMock.json', 'utf8'));
     res.json(mockJSON);
 });

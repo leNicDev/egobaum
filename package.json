@@ -4,8 +4,8 @@
   "description": "family tree hackathon project",
   "main": "index.js",
   "scripts": {
-    "start": "npm install && lessc ./Frontend/dev/less/* ./Frontend/pub/css/egobaum.css && cp ./Frontend/dev/index.html ./Frontend/pub/ && node index.js",
-    "prestart": "node serverScripts/couchInit.js"
+    "start": "lessc ./Frontend/dev/less/app.less ./Frontend/pub/css/egobaum.css && cp ./Frontend/dev/index.html ./Frontend/pub/ && node index.js",
+    "prestart": "npm install && node serverScripts/couchInit.js"
   },
   "repository": {
     "type": "git",

@@ -1,12 +1,22 @@
-//start from folder with "node index.js"
+var express = require('express'),
+    app = express(),
+    http = require('http'),
+    sys = require('util'),
+    io = require('socket.io')(http);
 
-var http = require("http");
+http.createServer(app);
+app.listen(8081, function () {
+    console.log('Server gestartet auf localhost:8081');
+});
 
-http.createServer(function(request, response){
+function puts(error, stdout, stderr) { sys.puts(stdout) }
 
-  response.writeHead(200, {'Content-Type':'text/plain'});
-  response.end('Hello World\n');
+app.get("/", function(req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end("INITIALES HALLO :-)");
+});
 
-}).listen(8081);
-
-console.log('Server running at http://127.0.0.1:8081/');
+app.get("/init/:param", function(req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('INIT JSON kommt zurueck');
+});

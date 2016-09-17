@@ -4,7 +4,7 @@
   "description": "family tree hackathon project",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "npm install && lessc ./Frontend/dev/less/* ./Frontend/pub/css/egobaum.css && node index.js",
     "prestart": "node serverScripts/couchInit.js"
   },
   "repository": {
@@ -18,9 +18,10 @@
   },
   "homepage": "https://github.com/brajos/egobaum#readme",
   "dependencies": {
-    "nano": "^6.2.0",
     "couch-db": "^1.1.3",
     "express": "^4.14.0",
+    "less": "^2.7.1",
+    "nano": "^6.2.0",
     "socket.io": "^1.4.8"
   }
 }

@@ -5,6 +5,26 @@ var express = require('express'),
     io = require('socket.io')(http),
     fs = require('fs');
 
+
+var low = require('lowdb');
+const db = low('ego.json')
+
+db.defaults({ persons: [] })
+    .value()
+
+db.get('persons')
+    .push({
+        id: 1313,
+        name: 'Roman',
+        surname: 'Tisch',
+        birthdate: '01.01.1970',
+        sex: 'm'
+    })
+    .value()
+
+
+
+
 http.createServer(app);
 app.listen(8081, function () {
     console.log('Server gestartet auf localhost:8081');
@@ -34,4 +54,27 @@ app.get("/init/:param", function(req, res) {
 app.get("/mock", function(req, res) {
     var mockJSON = JSON.parse(fs.readFileSync('./mock/firstJSONMock.json', 'utf8'));
     res.json(mockJSON);
+});
+
+// only working with lowdb
+app.get("/real", function(req, res) {
+    var realJSON = db.get('persons')
+        .find({ id: 1313 })
+        .value()
+    res.json(realJSON);
+});
+
+
+// only working with nano implementation
+app.get("/ego/:id", function(req,res){
+    var user_id = req.param('id');
+
+    egobaum.get(user_id, function(err, body) {
+        if (!err) {
+            res.json(body);
+        } else {
+            res.json({ bla : err});
+        }
+    });
+
 });

@@ -47,7 +47,7 @@ app.get("/ego/:id", function(req,res){
             if(person.child){
                 var children = person.child;
 
-                res.json(children);
+                //res.json(children);
 
                 console.log(children);
 

@@ -5,9 +5,9 @@ nano.db.destroy('egobaum', function() {
     // create a new database
     nano.db.create('egobaum', function() {
         // specify the database we are going to use
-        var alice = nano.use('egobaum');
+        var egobaum = nano.use('egobaum');
         // and insert a document in it
-        alice.insert({ crazy: true }, 'ego', function(err, body, header) {
+        egobaum.insert({ crazy: true }, 'ego', function(err, body, header) {
             if (err) {
                 console.log('[egobaum.insert] ', err.message);
                 return;

@@ -43,7 +43,36 @@ app.get("/ego/:id", function(req,res){
     egobaum.get(user_id, function(err, body) {
         if (!err) {
             var person = body.person;
-            res.json(person);
+
+            if(person.child){
+                var children = person.child;
+
+                res.json(children);
+
+                console.log(children);
+
+                egobaum.fetch(children, function(err, body) {
+                    if (!err) {
+                        body.rows.forEach(function(doc) {
+                             //console.log(doc);
+                        });
+                    }
+                });
+
+                egobaum.list(function(err, body) {
+                    if (!err) {
+                        body.rows.forEach(function(doc) {
+                            //console.log(doc);
+                        });
+                    }
+                });
+
+
+            }
+
+            var result = person;
+
+            // res.json(result);
         } else {
             res.json({ bla : err});
         }

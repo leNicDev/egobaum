@@ -43,8 +43,6 @@ app.get("/ego/:id", function(req,res){
     egobaum.get(user_id, function(err, body) {
         if (!err) {
             var person = body.person;
-            var parents = person.parents;
-
             res.json(person);
         } else {
             res.json({ bla : err});

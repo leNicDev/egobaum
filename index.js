@@ -6,23 +6,9 @@ var express = require('express'),
     fs = require('fs');
 
 
-var low = require('lowdb');
-const db = low('ego.json')
-
-db.defaults({ persons: [] })
-    .value()
-
-db.get('persons')
-    .push({
-        id: 1313,
-        name: 'Roman',
-        surname: 'Tisch',
-        birthdate: '01.01.1970',
-        sex: 'm'
-    })
-    .value()
-
-
+var nano = require('nano')('http://localhost:5984');
+var egobaum = nano.use('egobaum');
+console.log("CouchDB initialisiert ueber nano verfuegbar");
 
 
 http.createServer(app);
@@ -33,15 +19,15 @@ app.listen(8081, function () {
 function puts(error, stdout, stderr) { sys.puts(stdout) }
 
 app.get("/", function(req, res) {
-    res.sendfile('./Frontend/pub/index.html', {root: __dirname });
+    res.sendFile('./Frontend/pub/index.html', {root: __dirname });
 });
 
 app.get("/css/egobaum.css", function(req, res) {
-    res.sendfile('./Frontend/pub/css/egobaum.css', {root: __dirname });
+    res.sendFile('./Frontend/pub/css/egobaum.css', {root: __dirname });
 });
 
 app.get("/js/egobaum.js", function(req, res) {
-    res.sendfile('./Frontend/pub/js/egobaum.js', {root: __dirname });
+    res.sendFile('./Frontend/pub/js/egobaum.js', {root: __dirname });
 });
 
 app.get("/init/:param", function(req, res) {
@@ -71,7 +57,10 @@ app.get("/ego/:id", function(req,res){
 
     egobaum.get(user_id, function(err, body) {
         if (!err) {
-            res.json(body);
+            var person = body.person;
+            var parents = person.parents;
+
+            res.json(person);
         } else {
             res.json({ bla : err});
         }

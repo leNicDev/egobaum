@@ -7,9 +7,13 @@ function draw(json) {
 
 function drawEgo(egoJSON) {
     new Vue({
-        el: '#app',
+        el: '#ego',
         data: {
-            message: JSON.stringify(egoJSON)
+            name: egoJSON.name,
+            surname: egoJSON.surname,
+            birthdate: egoJSON.birthdate,
+            sex: egoJSON.sex
         }
     });
+    jQuery('.family-tree').show();
 }

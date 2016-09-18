@@ -5,11 +5,9 @@ var express = require('express'),
     io = require('socket.io')(http),
     fs = require('fs');
 
-
 var nano = require('nano')('http://localhost:5984');
 var egobaum = nano.use('egobaum');
 console.log("CouchDB initialisiert ueber nano verfuegbar");
-
 
 http.createServer(app);
 app.listen(8081, function () {
@@ -18,23 +16,11 @@ app.listen(8081, function () {
 
 function puts(error, stdout, stderr) { sys.puts(stdout) }
 
+app.use(express.static('Frontend/pub/'));
+
 app.get("/", function(req, res) {
-    res.sendFile('./Frontend/pub/index.html', {root: __dirname });
+    // put stuff here if server is called with no parameters etc.
 });
-
-app.get("/css/egobaum.css", function(req, res) {
-    res.sendFile('./Frontend/pub/css/egobaum.css', {root: __dirname });
-});
-
-app.get("/js/egobaum.js", function(req, res) {
-    res.sendFile('./Frontend/pub/js/egobaum.js', {root: __dirname });
-});
-
-app.get("/init/:param", function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('INIT JSON kommt zurueck');
-});
-
 
 // first static response
 app.get("/mock", function(req, res) {
@@ -49,7 +35,6 @@ app.get("/real", function(req, res) {
         .value()
     res.json(realJSON);
 });
-
 
 // only working with nano implementation
 app.get("/ego/:id", function(req,res){

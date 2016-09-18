@@ -1,0 +1,91 @@
+<!Doctype html>
+<head>
+    <title>Stammbaum</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body onload="draw();">
+    <div class="content">
+        <canvas id="familyTree"  class="box"  width="1900" height="900" >
+        </canvas>
+    </div>
+
+
+<style>
+	.content{
+		width: auto;
+		height: auto;
+		border:2px solid grey;
+	}
+	.box{
+		border:1px solid #d3d3d3;
+	}
+</style>
+
+<script>
+    function draw() {
+
+        var iam = document.getElementById("familyTree");
+        if (iam.getContext){
+            //use getContext to use the canvas for drawing
+            var ctx = iam.getContext("2d");
+
+            ctx.font = 'italic 10pt Calibri, sans-serif';
+            ctx.fillStyle = 'green';
+            ctx.strokeStyle = 'blue';
+            var rect_width = 50,
+                rect_height = 50,
+                space = 20;
+
+
+            //Iam
+            var name = "iam";
+            var iam_x = 950,
+            iam_y = 450;
+            ctx.strokeRect(iam_x,iam_y,rect_width,rect_height);
+            ctx.fillText(name , iam_x+5, iam_y + rect_height/2 );
+
+            //parent
+            var name = "parent";
+            var parent_x = iam_x,
+            parent_y = iam_y - rect_height - space;
+            ctx.strokeRect(parent_x,parent_y ,rect_width,rect_height);
+            ctx.fillText(name , parent_x+5 , parent_y  + rect_height/2);
+
+            //draw line
+            var move_y =  parent_y + rect_height,
+                move_x = parent_x + rect_height/2,
+                line_x = parent_x + rect_height/2,
+                line_y = parent_x;
+
+            ctx.moveTo(move_x, move_y );
+            ctx.lineTo(line_x,line_y);
+            ctx.stroke();
+
+            var child_y = iam_x + rect_height + space;
+
+            for(i=0; i<3; i++){
+                var child_x = 50 + i*70;
+                ctx.strokeRect(child_x, child_y, rect_width, rect_height);
+
+                //draw line
+                var move_y =  child_y - space/2,
+                    move_x = child_x + rect_height/2,
+                    line_x = child_x + rect_height/2,
+                    line_y = child_y;
+
+                ctx.moveTo(move_x, move_y );
+                ctx.lineTo(line_x, line_y);
+                ctx.stroke();
+            }
+            //draw line
+            ctx.moveTo(75, line_y - 10);
+            ctx.lineTo(line_x, line_y -10);
+            ctx.stroke();
+
+            //ctx.scale(4, 4)
+        }
+    }
+</script>
+</body>
+</html>

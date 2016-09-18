@@ -1,4 +1,6 @@
 window.onload = function () {
+    var self = this;
+    self.egoID = 1313;
 
     function jsonUpToDate(jsonData) {
         draw(jsonData);
@@ -8,7 +10,7 @@ window.onload = function () {
     // initial function for the first run
     function init() {
         // get initial JSON and
-        getInitJSON(10, jsonUpToDate);
+        getInitJSON(jsonUpToDate);
     }
 
     init();

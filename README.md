@@ -1,5 +1,7 @@
 # egobaum 1.0
 
+![Logo](/Egobaum.png "Logo")
+
 Das file egobaum.couch muss im folgenden Verzeichnis abgelegt werden: 
 C:\Program Files (x86)\Apache Software Foundation\CouchDB\var\lib\couchdb
 couch starten: net start "Apache CouchDb"

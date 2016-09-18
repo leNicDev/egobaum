@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "prestart": "npm install && npm install -g uglifyjs-folder && node serverScripts/couchInit.js && node serverScripts/utils.js && lessc ./Frontend/dev/less/app.less ./Frontend/pub/css/egobaum.css && cp ./Frontend/dev/index.html ./Frontend/pub/index.html && uglifyjs-folder ./Frontend/dev/js/ -o ./Frontend/pub/js/egobaum.js"
+    "prestart": "npm install && npm install -g uglifyjs-folder && node serverScripts/utils.js && lessc ./Frontend/dev/less/app.less ./Frontend/pub/css/egobaum.css && cp ./Frontend/dev/index.html ./Frontend/pub/index.html && uglifyjs-folder ./Frontend/dev/js/ -o ./Frontend/pub/js/egobaum.js"
   },
   "repository": {
     "type": "git",

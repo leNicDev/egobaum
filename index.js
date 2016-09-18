@@ -72,7 +72,7 @@ app.get("/ego/:id", function(req,res){
 
             var result = person;
 
-            // res.json(result);
+            res.json(result);
         } else {
             res.json({ bla : err});
         }

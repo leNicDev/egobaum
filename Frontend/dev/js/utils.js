@@ -1,17 +1,18 @@
 function getJSON(path, callback) {
-    var jsonData = {};
     jQuery.getJSON(path, function(result){
-        jsonData = result;
+        self.globalJSON = result;
     })
         .done(function() {
-            callback(jsonData);
+            callback();
         })
         .fail(function() {
             console.log( "getJSON error! TODO: Error-Handling" );
         });
 }
 
-function getInitJSON(callback) {
-    var path = "/ego/" + self.egoID;
+function getInitJSON(degree, callback) {
+    //var path = "/ego/" + self.egoID;
+    //var path = "/family/" + self.egoID + '/' + degree;
+    var path = "/mock"
     getJSON(path, callback);
 }

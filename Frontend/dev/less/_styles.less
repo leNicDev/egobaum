@@ -7,7 +7,7 @@
 
 body
 {
-    font-family: Helvetica, Arial, sans-serif;;
+    font-family: monospace;
     font-weight: bold;
     letter-spacing: 0.2px;
 }
@@ -19,6 +19,7 @@ body
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+
 }
 
 [class*="row"]
@@ -30,6 +31,7 @@ body
 
 .box
 {
+
     height: 80px;
     border: 3px dotted hotpink;
     position: relative;
@@ -43,7 +45,7 @@ body
 
     &:hover {
         cursor: pointer;
-        color: hotpink;
+        color: #91dc5a;
     }
 
     // box-shadow: 0 1px 3px 0 #aebcd2;
@@ -115,4 +117,29 @@ body
     border-left: 2px dotted black;
     width: 0;
     height: 20px;
+}
+
+h1 {
+    margin-top: 0;
+    font-family: monospace;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: black;
+    font-size: 24px;
+}
+
+span {
+    position: fixed;
+    left: 120px;
+    top: 18px;
+}
+
+.copyright {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-family: monospace;
+    color: black;
+    font-size: 16px;
 }

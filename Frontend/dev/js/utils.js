@@ -12,7 +12,6 @@ function getJSON(path, callback) {
 }
 
 function getInitJSON(callback) {
-    // TODO: build path (url) for the egoID
     var path = "/ego/" + self.egoID;
     getJSON(path, callback);
 }

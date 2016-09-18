@@ -4,7 +4,7 @@ window.onload = function () {
     self.nextID = '';
 
     function jsonUpToDate(jsonData) {
-        draw(jsonData);
+        initDraw(jsonData);
     }
 
 

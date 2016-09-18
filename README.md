@@ -1,6 +1,6 @@
 # egobaum 1.0
 
-![Logo](/Egobaum.png  =400x "Logo")
+![Logo](/Egobaum.png "Logo" =400x)
 
 Das file egobaum.couch muss im folgenden Verzeichnis abgelegt werden: 
 C:\Program Files (x86)\Apache Software Foundation\CouchDB\var\lib\couchdb

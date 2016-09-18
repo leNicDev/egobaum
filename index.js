@@ -19,12 +19,7 @@ function puts(error, stdout, stderr) { sys.puts(stdout) }
 app.use(express.static('Frontend/pub/'));
 
 app.get("/", function(req, res) {
-    res.sendFile('./Frontend/pub/index.html', {root: __dirname });
-});
-
-app.get("/init/:param", function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('INIT JSON kommt zurueck');
+    // put stuff here if server is called with no parameters etc.
 });
 
 // first static response
@@ -40,7 +35,6 @@ app.get("/real", function(req, res) {
         .value()
     res.json(realJSON);
 });
-
 
 // only working with nano implementation
 app.get("/ego/:id", function(req,res){

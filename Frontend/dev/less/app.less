@@ -1,8 +1,8 @@
 *
 {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body
@@ -14,11 +14,11 @@ body
 
 .container
 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 [class*="row"]
@@ -32,8 +32,6 @@ body
 {
     height: 80px;
     border: 3px solid hotpink;
-    min-width: 200px;
-    max-width: 200px;
     position: relative;
     padding: 5px;
     background: #fff;
@@ -42,12 +40,14 @@ body
     color: #07446f;
     box-shadow: 0 1px 3px 0 #aebcd2;
     border-radius: 3px;
+    /*min-width: 200px;
+    max-width: 200px;*/
 
-    &:hover {
-         cursor: pointer;
-         background: hotpink;
-    }
+}
 
+.box:hover {
+    cursor: pointer;
+    background: hotpink;
 }
 
 .box > [class*="row"] > .box
@@ -57,19 +57,76 @@ body
 
 .box:not(:last-child)
 {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
-.box:after
+/*.box:after
 {
-    background-color: #000;
-    content: "";
-    display: flex;
-    height: 18px;
-    width: 3px;
+background-color: #000;
+content: "";
+display: flex;
+height: 18px;
+width: 3px;
+position: absolute;
+justify-content: center;
+margin: 0 auto;
+left: 50%;
+bottom: -21px;
+}*/
+
+
+.box::before,
+.box::after {
+    content: '';
     position: absolute;
-    justify-content: center;
-    margin: 0 auto;
+    top: -22px;
+    right: 50%;
+    border-top: 1px solid #ccc;
+    width: 50%; height: 20px;
+}
+
+.box::after
+{
+    right: auto; left: 50%;
+    border-left: 1px solid #ccc;
+}
+
+
+.box:only-child::after,
+.box:only-child::before
+{
+    display: none;
+}
+
+
+.box:only-child { padding-top: 0;}
+
+
+.box:first-child::before,
+.box:last-child::after
+{
+    border: 0 none;
+}
+
+.box:last-child::before
+{
+    border-right: 1px solid #ccc;
+    border-radius: 0 5px 0 0;
+}
+
+.box:first-child::after
+{
+    border-radius: 5px 0 0 0;
+}
+
+
+.row .row::before
+{
+    content: '';
+    position: absolute;
+    top: 80px;
     left: 50%;
-    bottom: -21px;
+    border-left: 1px solid #ccc;
+    width: 0;
+    height: 20px;
 }

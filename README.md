@@ -4,5 +4,8 @@ DAS Tool im Internet für tolle Bäume ;-)
 
 TODO:
 - Sourcemap
-- watch task
-- 
+- npm dev:
+    - watch task
+    - bei bedarf auch server neustarten
+    - 
+- Doku

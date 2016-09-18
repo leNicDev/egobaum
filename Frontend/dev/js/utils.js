@@ -13,5 +13,6 @@ function getJSON(path, callback) {
 
 function getInitJSON(callback) {
     // TODO: build path (url) for the egoID
-    getJSON("/mock", callback);
+    var path = "/ego/" + self.egoID;
+    getJSON(path, callback);
 }

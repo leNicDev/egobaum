@@ -1,11 +1,9 @@
 function draw(json) {
-    var egoJSON = {};
-    egoJSON = json[self.egoID];
-    drawEgo(egoJSON);
+    drawPerson(json);
 }
 
 
-function drawEgo(egoJSON) {
+function drawPerson(egoJSON) {
     new Vue({
         el: '#ego',
         data: {

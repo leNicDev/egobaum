@@ -1,6 +1,7 @@
 window.onload = function () {
     var self = this;
-    self.egoID = 1313;
+    self.egoID = 'fdd0e7bc69efb8736e4555873900404f';
+    self.nextID = '';
 
     function jsonUpToDate(jsonData) {
         draw(jsonData);

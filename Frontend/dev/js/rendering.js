@@ -5,27 +5,25 @@ function initDraw(json) {
     // child
     if (self.globalJSON[self.egoID].child) {
         var $childRow = '';
+        var childID = 0;
         jQuery.each(self.globalJSON[self.egoID].child, function (index, child) {
+            childID = self.globalJSON[self.egoID].child[index];
             if ($childRow === '') {
-                $childRow = jQuery(createRow(self.globalJSON[self.egoID].child[index]));
+                $childRow = jQuery(createRow(childID));
                 jQuery('#'+self.egoID).append($childRow);
             } else {
-                $childRow.addClass(self.globalJSON[self.egoID].child[index]);
+                $childRow.addClass(childID);
             }
-            drawPerson(self.globalJSON[self.egoID].child[index]);
+            drawPerson(childID);
         });
     }
 }
 
 
 function drawPerson(cellID) {
-    var person = '<div id="' + cellID + '" class="box">' + self.globalJSON[cellID].name + ' ' + self.globalJSON[cellID].surname + ' <br/> ' +
-        self.globalJSON[cellID].birthdate + ' <br/> ' + self.globalJSON[cellID].sex + ' </div>';
-    console.log("person");
-    console.log(person);
-    console.log("cellID");
-    console.log(cellID);
-
+    var actualPerson = self.globalJSON[cellID];
+    var person = '<div id="' + cellID + '" class="box">' + actualPerson.name + ' ' + actualPerson.surname + ' <br/> ' +
+        actualPerson.birthdate + ' <br/> ' + actualPerson.sex + ' </div>';
     jQuery('.' + cellID).append(person);
     jQuery('.family').show();
 }

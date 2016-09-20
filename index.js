@@ -28,6 +28,12 @@ app.get("/mock", function(req, res) {
     res.json(mockJSON);
 });
 
+// MOCK with more data
+app.get("/mockv2", function(req, res) {
+    var mockJSON = JSON.parse(fs.readFileSync('./mock/mockV2.json', 'utf8'));
+    res.json(mockJSON);
+});
+
 // only working with lowdb
 app.get("/real", function(req, res) {
     var realJSON = db.get('persons')

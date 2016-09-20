@@ -13,6 +13,6 @@ function getJSON(path, callback) {
 function getInitJSON(degree, callback) {
     //var path = "/ego/" + self.egoID;
     //var path = "/family/" + self.egoID + '/' + degree;
-    var path = "/mock";
+    var path = "/mockV2";
     getJSON(path, callback);
 }

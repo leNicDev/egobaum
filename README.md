@@ -17,6 +17,10 @@ TODO:
 - Sourcemap
 - npm dev:
     - watch task
-    - bei bedarf auch server neustarten
+    - bei Bedarf auch Server neustarten
     - 
 - Doku
+- Unit-Tests
+- ..*: 
+
+- Meilenstein 2 definieren

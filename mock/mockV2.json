@@ -1,0 +1,252 @@
+{
+  "0b25d53ddd83594de9a839892c000fb5":{
+    "name":"Judith",
+    "surname":"Doe",
+    "sex":"f",
+    "birthdate":"19.12.2001",
+    "child":{
+
+    },
+    "parent":{
+      "0":"fdd0e7bc69efb8736e4555873900404f"
+    }
+  },
+  "0b25d53ddd83594de9a839892c003cfa":{
+    "name":"Peter",
+    "surname":"Tisch",
+    "sex":"m",
+    "birthdate":"20.02.1956",
+    "child":{
+      "0":"0b25d53ddd83594de9a839892c0044ec",
+      "1":"0b25d53ddd83594de9a839892c004e48"
+    },
+    "parent":{
+
+    }
+  },
+  "0b25d53ddd83594de9a839892c004113":{
+    "name":"Inga",
+    "surname":"Tisch",
+    "sex":"f",
+    "birthdate":"26.12.1960",
+    "child":{
+      "0":"0b25d53ddd83594de9a839892c0044ec",
+      "1":"0b25d53ddd83594de9a839892c004e48"
+    },
+    "parent":{
+
+    }
+  },
+  "0b25d53ddd83594de9a839892c0044ec":{
+    "name":"Roman",
+    "surname":"Tisch",
+    "sex":"m",
+    "birthdate":"01.01.1970",
+    "child":{
+      "0":"0b25d53ddd83594de9a839892c005c5b",
+      "1":"0b25d53ddd83594de9a839892c006365"
+    },
+    "parent":{
+      "0":"0b25d53ddd83594de9a839892c003cfa",
+      "1":"0b25d53ddd83594de9a839892c004113"
+    }
+  },
+  "0b25d53ddd83594de9a839892c004e48":{
+    "name":"Theore",
+    "surname":"Tisch",
+    "sex":"f",
+    "birthdate":"01.05.1980",
+    "child":{
+
+    },
+    "parent":{
+      "0":"0b25d53ddd83594de9a839892c003cfa",
+      "1":"0b25d53ddd83594de9a839892c004113"
+    }
+  },
+  "0b25d53ddd83594de9a839892c005c5b":{
+    "name":"Magne",
+    "surname":"Tisch",
+    "sex":"f",
+    "birthdate":"12.11.1990",
+    "child":{
+
+    },
+    "parent":{
+      "0":"0b25d53ddd83594de9a839892c0044ec"
+    }
+  },
+  "0b25d53ddd83594de9a839892c006365":{
+    "name":"Chao",
+    "surname":"Tisch",
+    "sex":"m",
+    "birthdate":"12.11.1998",
+    "child":{
+
+    },
+    "parent":{
+      "0":"0b25d53ddd83594de9a839892c0044ec"
+    }
+  },
+  "0b25d53ddd83594de9a839892c007026":{
+    "name":"Heilwig",
+    "surname":"Schulze",
+    "sex":"f",
+    "birthdate":"1940",
+    "child":{
+      "0":"0b25d53ddd83594de9a839892c009a83"
+    },
+    "parent":{
+
+    }
+  },
+  "0b25d53ddd83594de9a839892c007893":{
+    "name":"Meinhard",
+    "surname":"Schulze",
+    "sex":"m",
+    "birthdate":"1940",
+    "child":{
+      "0":"0b25d53ddd83594de9a839892c009a83",
+      "1":"0b25d53ddd83594de9a839892c00b965"
+    },
+    "parent":{
+
+    }
+  },
+  "0b25d53ddd83594de9a839892c00801a":{
+    "name":"Carl",
+    "surname":"Schulze",
+    "sex":"m",
+    "birthdate":"1934",
+    "child":{
+      "0":"0b25d53ddd83594de9a839892c003cfa",
+      "1":"0b25d53ddd83594de9a839892c007893"
+    },
+    "parent":{
+
+    }
+  },
+  "0b25d53ddd83594de9a839892c008edb":{
+    "name":"Sieghild",
+    "surname":"Schulze",
+    "sex":"f",
+    "birthdate":"1934",
+    "child":{
+      "0":"0b25d53ddd83594de9a839892c00b965"
+    },
+    "parent":{
+
+    }
+  },
+  "0b25d53ddd83594de9a839892c009a83":{
+    "name":"Ingeborg",
+    "surname":"Schulze",
+    "sex":"f",
+    "birthdate":"1957",
+    "child":{
+
+    },
+    "parent":{
+      "0":"0b25d53ddd83594de9a839892c007026",
+      "1":"0b25d53ddd83594de9a839892c007893"
+    }
+  },
+  "0b25d53ddd83594de9a839892c00aa55":{
+    "name":"Thorsten",
+    "surname":"Schulze",
+    "sex":"m",
+    "birthdate":"1957",
+    "child":{
+
+    },
+    "parent":{
+
+    }
+  },
+  "0b25d53ddd83594de9a839892c00b965":{
+    "name":"Melitta",
+    "surname":"Schulze",
+    "sex":"f",
+    "birthdate":"1966",
+    "child":{
+      "0":"0b25d53ddd83594de9a839892c00aa55",
+      "1":"fdd0e7bc69efb8736e45558739002b1f"
+    },
+    "parent":{
+
+    }
+  },
+  "0b25d53ddd83594de9a839892c00c691":{
+    "name":"Detlef",
+    "surname":"Schulze",
+    "sex":"m",
+    "birthdate":"1966",
+    "child":{
+
+    },
+    "parent":{
+
+    }
+  },
+  "0b25d53ddd83594de9a839892c00d1b9":{
+    "name":"Kristiane",
+    "surname":"Schulze",
+    "sex":"f",
+    "birthdate":"1980",
+    "child":{
+
+    },
+    "parent":{
+
+    }
+  },
+  "0b25d53ddd83594de9a839892c00d9dc":{
+    "name":"Corinna",
+    "surname":"Schulze",
+    "sex":"f",
+    "birthdate":"1985",
+    "child":{
+
+    },
+    "parent":{
+
+    }
+  },
+  "fdd0e7bc69efb8736e45558739002b1f":{
+    "name":"John",
+    "surname":"Doe",
+    "sex":"m",
+    "birthdate":"13.12.1962",
+    "child":{
+      "0":"fdd0e7bc69efb8736e4555873900404f"
+    },
+    "parent":{
+
+    }
+  },
+  "fdd0e7bc69efb8736e455587390039b4":{
+    "name":"Jane",
+    "surname":"Doe",
+    "sex":"f",
+    "birthdate":"23.02.1964",
+    "child":{
+      "0":"fdd0e7bc69efb8736e4555873900404f"
+    },
+    "parent":{
+
+    }
+  },
+  "fdd0e7bc69efb8736e4555873900404f":{
+    "name":"Rick",
+    "surname":"Doe",
+    "sex":"m",
+    "birthdate":"13.04.1984",
+    "child":{
+      "0":"0b25d53ddd83594de9a839892c000fb5"
+    },
+    "parent":{
+      "0":"fdd0e7bc69efb8736e45558739002b1f",
+      "1":"fdd0e7bc69efb8736e455587390039b4"
+    }
+  }
+}

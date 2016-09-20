@@ -1,5 +1,8 @@
 # egobaum 1.0
 
+Das ist unser Stand vom Sonntag den 18.09.2016 (naja... fast)
+
+
 ![Logo](/Egobaum_small.png "Logo")
 
 Das file egobaum.couch muss im folgenden Verzeichnis abgelegt werden: 

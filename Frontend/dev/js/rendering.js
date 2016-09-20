@@ -2,21 +2,28 @@ function initDraw(json) {
     var $row = jQuery(createRow(self.egoID));
     jQuery('.family').append($row);
     drawPerson(self.egoID);
-    // child
+
+    // draw children
     if (self.globalJSON[self.egoID].child) {
-        var $childRow = '';
-        var childID = 0;
-        jQuery.each(self.globalJSON[self.egoID].child, function (index, child) {
-            childID = self.globalJSON[self.egoID].child[index];
-            if ($childRow === '') {
-                $childRow = jQuery(createRow(childID));
-                jQuery('#'+self.egoID).append($childRow);
-            } else {
-                $childRow.addClass(childID);
-            }
-            drawPerson(childID);
-        });
+        createChildGeneration(self.egoID);
     }
+}
+
+function createChildGeneration(parentID) {
+    var $childRow = '';
+    var childID = 0;
+    jQuery.each(self.globalJSON[parentID].child, function (index, child) {
+        childID = self.globalJSON[parentID].child[index];
+        if ($childRow === '') {
+            $childRow = jQuery(createRow(childID));
+            jQuery('#'+parentID).append($childRow);
+        } else {
+            $childRow.addClass(childID);
+        }
+        drawPerson(childID);
+        //
+        createChildGeneration(self.globalJSON[parentID].child[index]);
+    });
 }
 
 

@@ -20,6 +20,8 @@ TODO:
 - Initialen Baum aus der DB holen statt aus dem MOCK
     - inkl. Angabe der "Tiefe"
 
+- Eltern (rekursiv) und Geschwister von EGO anzeigen.
+
 - Nachladen von Daten
 
 - npm dev:

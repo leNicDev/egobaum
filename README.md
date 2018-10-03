@@ -1,3 +1,6 @@
+# Notes für egobaum 2.0:
+- http://visjs.org/
+
 # egobaum 1.0
 
 ![Logo](/Egobaum_small.png "Logo")
